@@ -5,11 +5,13 @@ from .models import Tweet
 # Create your views here.
 
 class TweetDetailView(DetailView):
-
     queryset = Tweet.objects.all()
 
-    def get_object(self):
-        return Tweet.objects.get(id=1)
+    # def get_object(self):
+    #     print(self.kwargs)
+    #     pk = self.kwargs.get("pk")
+    #     print(pk)
+    #     return Tweet.objects.get(id=pk)
 
 class TweetListView(ListView):
     queryset = Tweet.objects.all()
